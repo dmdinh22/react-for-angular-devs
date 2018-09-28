@@ -1,5 +1,8 @@
 const ForumHeader = React.createClass({
     render: function() {
+        // pulling the allAnswers property from the parent componet down
+        console.log(this.props.allAnswers);
+
         return React.createElement(
             'nav',
             {
