@@ -1,0 +1,22 @@
+function Dispatcher() {
+    this._lastID = 0;
+    this.callbacks = {};
+}
+
+Dispatcher.prototype.register = function (callback) {
+    let id = 'CID_' + this._lastID++;
+    this._callbacks[id] = callback;
+    return id;
+};
+
+Dispatcher.prototype.dispatch = function (action) {
+    // let in syntax from ES6
+    for (let id in this._callbacks) {
+        this._callbacks[id](action);
+    }
+};
+
+Dispatcher.prototype.waitFor = function (ids) {
+    // TODO: particular callback has to wait for other
+    // callbacks to finish before running
+};
