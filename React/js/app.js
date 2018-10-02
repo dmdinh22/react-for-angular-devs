@@ -14,3 +14,8 @@ myEmitter.on('STARTED_THE_APP', function() {
 });
 
 myEmitter.EventEmitter('STARTED_THE_APP');
+
+ForumDispatcher.register(function(action) {
+    console.log('received an action');
+    console.log(action);
+});
