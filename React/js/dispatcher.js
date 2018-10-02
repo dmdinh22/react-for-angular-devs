@@ -1,6 +1,6 @@
 function Dispatcher() {
     this._lastID = 0;
-    this.callbacks = {};
+    this._callbacks = {};
 }
 
 Dispatcher.prototype.register = function(callback) {
@@ -10,7 +10,6 @@ Dispatcher.prototype.register = function(callback) {
 };
 
 Dispatcher.prototype.dispatch = function(action) {
-    // let in syntax from ES6
     for (let id in this._callbacks) {
         this._callbacks[id](action);
     }
