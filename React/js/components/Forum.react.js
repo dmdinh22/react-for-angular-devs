@@ -19,6 +19,14 @@ var Forum = React.createClass({
         };
     },
 
+    _onAddAnswer: function(answerText) {
+        // dispatch that an event has occured
+        ForumDispatcher.dispatch({
+            actionType: 'FORUM_ANSWER_ADDED',
+            newAnswer: answerText
+        });
+    },
+
     render: function() {
         return (
             <div>
@@ -30,7 +38,7 @@ var Forum = React.createClass({
                     <ForumAnswers allAnswers={this.state.allAnswers} />
                     <hr />
                     <h4>Add an answer</h4>
-                    <ForumAddAnswerBox />
+                    <ForumAddAnswerBox onAddAnswer={this._onAddAnswer} />
                 </div>
             </div>
         );
