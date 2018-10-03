@@ -19,3 +19,18 @@ const ForumStore = new EventEmitter();
 ForumStore.getAnswers = function() {
     return answerData;
 };
+
+ForumStore.addAnswer = function(newAnswer) {
+    answerData[Object.keys(answerData).length + 1] = {
+        body: newAnswer,
+        correct: false
+    };
+};
+
+ForumStore.markAsCorrect = function(id) {
+    for (key in answerData) {
+        answerData[key].correct = false;
+    }
+
+    answerData[id].correct = true;
+};
