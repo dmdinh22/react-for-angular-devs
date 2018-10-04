@@ -1,1 +1,1 @@
-var ForumDispatcher = new Dispatcher();
+const ForumDispatcher = new Dispatcher();

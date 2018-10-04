@@ -14,17 +14,31 @@ const ForumAnswer = React.createClass({
         // passed down from ForumAnswers component
         let answer = this.props.answer;
 
+        let markAnswer;
+
+        if (!answer.correct) {
+            markAnswer = (
+                <div className="pull-right">
+                    <small>
+                        <a href="#" onClick={this._markCorrect}>
+                            Mark as correct
+                        </a>
+                    </small>
+                </div>
+            );
+        }
+
+        let classNames = 'panel-body';
+
+        if (answer.correct) {
+            classNames += ' bg-success';
+        }
+
         return (
             <div className="panel panel-default">
-                <div className="panel-body">
+                <div className={classNames}>
                     {answer.body}
-                    <div className="pull-right">
-                        <small>
-                            <a href="#" onClick={this._markCorrect}>
-                                Mark as correct
-                            </a>
-                        </small>
-                    </div>
+                    {markAnswer}
                 </div>
             </div>
         );
