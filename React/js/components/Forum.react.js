@@ -19,10 +19,7 @@ var Forum = React.createClass({
 
     _onAddAnswer: function(answerText) {
         // dispatch that an event has occured
-        ForumDispatcher.dispatch({
-            actionType: 'FORUM_ANSWER_ADDED',
-            newAnswer: answerText
-        });
+        ForumActions.addNewAnswer(answerText);
     },
 
     render: function() {
