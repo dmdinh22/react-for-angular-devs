@@ -1,3 +1,7 @@
+var React = require('react');
+var ForumAnswer = require('./ForumAnswer.react');
+var ForumActions = require('../actions/ForumActions');
+
 const ForumAnswers = React.createClass({
     _onMarkCorrect: function(id) {
         ForumActions.markAnswerCorrect(id);
@@ -20,3 +24,5 @@ const ForumAnswers = React.createClass({
         return <div>{answers}</div>;
     }
 });
+
+module.exports = ForumAnswers;

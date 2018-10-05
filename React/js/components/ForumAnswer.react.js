@@ -1,3 +1,5 @@
+var React = require('react');
+
 const ForumAnswer = React.createClass({
     // in order to create this component, these
     // props are required
@@ -44,3 +46,5 @@ const ForumAnswer = React.createClass({
         );
     }
 });
+
+module.exports = ForumAnswer;

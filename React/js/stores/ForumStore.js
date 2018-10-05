@@ -1,3 +1,7 @@
+var EventEmitter = require('events').EventEmitter;
+var ForumDispatcher = require('../dispatcher/ForumDispatcher');
+var ForumConstants = require('../constants/ForumConstants');
+
 const answerData = {
     '1': {
         body: 'Isn\'t that about time travel?',

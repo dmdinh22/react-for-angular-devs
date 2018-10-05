@@ -1,3 +1,5 @@
+var React = require('react');
+
 const ForumQuestion = React.createClass({
     render: function() {
         return (
@@ -8,3 +10,5 @@ const ForumQuestion = React.createClass({
         );
     }
 });
+
+module.exports = ForumQuestion;

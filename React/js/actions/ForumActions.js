@@ -1,5 +1,7 @@
-// action creator to clean up dispatching code
+var ForumDispatcher = require('../dispatcher/ForumDispatcher');
+var ForumConstants = require('../constants/ForumConstants');
 
+// action creator to clean up dispatching code
 const ForumActions = {
     markAnswerCorrect: function(id) {
         ForumDispatcher.dispatch({
@@ -15,3 +17,5 @@ const ForumActions = {
         });
     }
 };
+
+module.exports = ForumActions;
