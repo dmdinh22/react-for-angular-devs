@@ -1,6 +1,6 @@
-var React = require('react');
+const React = require('react');
 
-var ForumHeader = React.createClass({
+const ForumHeader = React.createClass({
     render: function() {
         console.log(this.props.allAnswers);
 

@@ -1,4 +1,4 @@
-var Dispatcher = require('flux').Dispatcher;
-var ForumDispatcher = new Dispatcher();
+const Dispatcher = require('flux').Dispatcher;
+const ForumDispatcher = new Dispatcher();
 
 module.exports = ForumDispatcher;

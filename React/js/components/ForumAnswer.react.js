@@ -1,4 +1,4 @@
-var React = require('react');
+const React = require('react');
 
 const ForumAnswer = React.createClass({
     // in order to create this component, these

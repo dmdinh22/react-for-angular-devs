@@ -1,6 +1,6 @@
-var React = require('react');
-var ForumAnswer = require('./ForumAnswer.react');
-var ForumActions = require('../actions/ForumActions');
+const React = require('react');
+const ForumAnswer = require('./ForumAnswer.react');
+const ForumActions = require('../actions/ForumActions');
 
 const ForumAnswers = React.createClass({
     _onMarkCorrect: function(id) {

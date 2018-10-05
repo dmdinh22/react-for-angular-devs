@@ -1,22 +1,22 @@
-var ForumHeader = React.createClass({
-    displayName: "ForumHeader",
+const ForumHeader = React.createClass({
+    displayName: 'ForumHeader',
 
-    render: function () {
+    render: function() {
         console.log(this.props.allAnswers);
 
         return React.createElement(
-            "nav",
-            { className: "navbar navbar-default" },
+            'nav',
+            { className: 'navbar navbar-default' },
             React.createElement(
-                "div",
-                { className: "container-fluid" },
+                'div',
+                { className: 'container-fluid' },
                 React.createElement(
-                    "div",
-                    { className: "navbar-header" },
+                    'div',
+                    { className: 'navbar-header' },
                     React.createElement(
-                        "a",
-                        { className: "navbar-brand", href: "#" },
-                        "React Forum"
+                        'a',
+                        { className: 'navbar-brand', href: '#' },
+                        'React Forum'
                     )
                 )
             )

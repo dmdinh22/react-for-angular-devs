@@ -1,25 +1,25 @@
-var Forum = React.createClass({
-    displayName: "Forum",
+const Forum = React.createClass({
+    displayName: 'Forum',
 
-    getInitialState: function () {
+    getInitialState: function() {
         return {
             allAnswers: ForumStore.getAnswers()
         };
     },
 
-    componentDidMount: function () {
+    componentDidMount: function() {
         ForumStore.addChangeListener(this._onChange);
     },
 
-    componentWillUnmount: function () {
+    componentWillUnmount: function() {
         ForumStore.removeListener(this._onChange);
     },
 
-    _onChange: function () {
+    _onChange: function() {
         this.setState({ allAnswers: ForumStore.getAnswers() });
     },
 
-    _onAddAnswer: function (answerText) {
+    _onAddAnswer: function(answerText) {
         // dispatch that an event has occured
         ForumDispatcher.dispatch({
             actionType: 'FORUM_ANSWER_ADDED',
@@ -27,24 +27,24 @@ var Forum = React.createClass({
         });
     },
 
-    render: function () {
+    render: function() {
         return React.createElement(
-            "div",
+            'div',
             null,
             React.createElement(ForumHeader, null),
             React.createElement(
-                "div",
-                { className: "container" },
+                'div',
+                { className: 'container' },
                 React.createElement(ForumQuestion, null),
-                React.createElement("hr", null),
-                React.createElement(ForumAnswers, { allAnswers: this.state.allAnswers }),
-                React.createElement("hr", null),
-                React.createElement(
-                    "h4",
-                    null,
-                    "Add an answer"
-                ),
-                React.createElement(ForumAddAnswerBox, { onAddAnswer: this._onAddAnswer })
+                React.createElement('hr', null),
+                React.createElement(ForumAnswers, {
+                    allAnswers: this.state.allAnswers
+                }),
+                React.createElement('hr', null),
+                React.createElement('h4', null, 'Add an answer'),
+                React.createElement(ForumAddAnswerBox, {
+                    onAddAnswer: this._onAddAnswer
+                })
             )
         );
     }

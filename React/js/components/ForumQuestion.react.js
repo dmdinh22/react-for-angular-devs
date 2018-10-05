@@ -1,4 +1,4 @@
-var React = require('react');
+const React = require('react');
 
 const ForumQuestion = React.createClass({
     render: function() {

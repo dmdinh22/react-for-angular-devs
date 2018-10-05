@@ -1,6 +1,6 @@
-var EventEmitter = require('events').EventEmitter;
-var ForumDispatcher = require('../dispatcher/ForumDispatcher');
-var ForumConstants = require('../constants/ForumConstants');
+const EventEmitter = require('events').EventEmitter;
+const ForumDispatcher = require('../dispatcher/ForumDispatcher');
+const ForumConstants = require('../constants/ForumConstants');
 
 const answerData = {
     '1': {

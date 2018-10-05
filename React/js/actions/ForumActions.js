@@ -1,5 +1,5 @@
-var ForumDispatcher = require('../dispatcher/ForumDispatcher');
-var ForumConstants = require('../constants/ForumConstants');
+const ForumDispatcher = require('../dispatcher/ForumDispatcher');
+const ForumConstants = require('../constants/ForumConstants');
 
 // action creator to clean up dispatching code
 const ForumActions = {

@@ -1,12 +1,12 @@
-var React = require('react');
-var ForumHeader = require('./ForumHeader.react');
-var ForumQuestion = require('./ForumQuestion.react');
-var ForumAnswers = require('./ForumAnswers.react');
-var ForumAddAnswerBox = require('./ForumAddAnswerBox.react');
-var ForumActions = require('../actions/ForumActions');
-var ForumStore = require('../stores/ForumStore');
+const React = require('react');
+const ForumHeader = require('./ForumHeader.react');
+const ForumQuestion = require('./ForumQuestion.react');
+const ForumAnswers = require('./ForumAnswers.react');
+const ForumAddAnswerBox = require('./ForumAddAnswerBox.react');
+const ForumActions = require('../actions/ForumActions');
+const ForumStore = require('../stores/ForumStore');
 
-var Forum = React.createClass({
+const Forum = React.createClass({
     getInitialState: function() {
         return {
             allAnswers: ForumStore.getAnswers()
