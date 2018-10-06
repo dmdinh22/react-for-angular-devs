@@ -63,3 +63,5 @@ ForumDispatcher.register(function(action) {
     }
     }
 });
+
+module.exports = ForumStore;
