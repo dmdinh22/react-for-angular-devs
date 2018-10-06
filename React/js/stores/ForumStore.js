@@ -1,4 +1,4 @@
-const EventEmitter = require('events').EventEmitter;
+const EventEmitter = require('events').EventEmitter; //node.js event emitter
 const ForumDispatcher = require('../dispatcher/ForumDispatcher');
 const ForumConstants = require('../constants/ForumConstants');
 
